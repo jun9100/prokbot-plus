@@ -86,7 +86,8 @@ def main():
             raise ValueError('Injection library checksum mismatch')
         command = [sys.executable, ROOT / 'patchers/ios/patch-app.py', '--source', source,
                    '--output', work / 'patched', '--dylib', dylib, '--resources', resources,
-                   '--bundle-id', args.bundle_id, '--unsigned']
+                   '--bundle-id', args.bundle_id, '--unsigned',
+                   '--expect-version', version, '--expect-build', build]
         if args.app_group:
             command += ['--app-group', args.app_group]
         if args.remove_extensions:

@@ -109,6 +109,8 @@ def main():
     p.add_argument('--app-group',help='Shared App Group; defaults to group.<bundle-id>')
     p.add_argument('--extension-profiles',type=Path,help='JSON mapping extension directory names to existing profile paths')
     p.add_argument('--unsigned',action='store_true',help='Export without signing or accessing certificates')
+    p.add_argument('--expect-version',default='1.16.0',help='Required CFBundleShortVersionString of the source app')
+    p.add_argument('--expect-build',default='23152',help='Required CFBundleVersion of the source app')
     a=p.parse_args()
     if a.output.exists():raise ValueError('Output exists')
     if not a.dylib.is_file() or not (a.resources/'gateway-template.hbc').is_file():raise ValueError('Build the dylib and template first')
@@ -119,7 +121,7 @@ def main():
     extension_profiles=json.loads(a.extension_profiles.read_text()) if a.extension_profiles else {}
     if not isinstance(extension_profiles,dict):raise ValueError('Expected extension profile mapping')
     original=plistlib.loads((a.source/'Info.plist').read_bytes());executable=original['CFBundleExecutable']
-    if original.get('CFBundleIdentifier')!='co.anysphere.sand' or original.get('CFBundleShortVersionString')!='1.16.0' or original.get('CFBundleVersion')!='23152':raise ValueError('Unsupported original app')
+    if original.get('CFBundleIdentifier')!='co.anysphere.sand' or original.get('CFBundleShortVersionString')!=a.expect_version or original.get('CFBundleVersion')!=a.expect_build:raise ValueError('Unsupported original app')
     if a.bundle_id==original['CFBundleIdentifier']:raise ValueError('Use an independent bundle ID to preserve the installed original')
     before=sha(a.source/executable);a.output.mkdir(parents=True,mode=0o700)
     app=a.output/'Payload'/a.source.name;shutil.copytree(a.source,app,symlinks=True)
