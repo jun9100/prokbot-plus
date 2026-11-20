@@ -84,7 +84,7 @@ You also need a model API with tool calling (and image input, if the Bot should 
 | Windows x64 | [1.2.3](https://api2.cursor.sh/updates/api/download/stable/win32-x64-user/sand) (not supported by this patch) | **1.1.0** (recommended); 0.71.2 if it does not work |
 | macOS ARM64 | [1.2.3](https://api2.cursor.sh/updates/api/download/stable/darwin-arm64/sand) | 0.71.2 (not yet adapted to 1.2.3; not tested on a Mac) |
 | macOS Intel (x64) | [1.2.3](https://api2.cursor.sh/updates/api/download/stable/darwin-x64/sand) | 0.71.2 (experimental: not yet adapted to 1.2.3; not tested on an Intel Mac) |
-| iOS | [1.26.0](https://apps.apple.com/us/app/grok-bot/id6794501026) | 1.16.0 (build 23152; not tested on an iPhone or iPad) |
+| iOS | [1.26.0](https://apps.apple.com/us/app/grok-bot/id6794501026) | 1.26.0 (build 29388; not tested on an iPhone or iPad) |
 | Android 9+ (unofficial) | Does not use the official Android app | App **1.1.0** (build 10100), interface taken from the Windows **1.1.0** installer (recommended; 0.71.2 if it does not work) |
 | Web client (browser, unofficial) | Nothing to install | Interface taken from the Windows **1.1.0** installer (recommended; 0.71.2 if it does not work), built once and uploaded to your Host |
 | Linux server | n/a | Host `d0a4baa`; Bot computer `9d2ac1b` (x86_64) |

@@ -84,7 +84,7 @@ Grok Bot 是 xAI 的 AI 助手应用。它的 Bot 除了聊天，还有自己的
 | Windows x64 | [1.2.3](https://api2.cursor.sh/updates/api/download/stable/win32-x64-user/sand)（此补丁不支持） | **1.1.0**（推荐）；用不了再用 0.71.2 |
 | macOS ARM64 | [1.2.3](https://api2.cursor.sh/updates/api/download/stable/darwin-arm64/sand) | 0.71.2（尚未适配 1.2.3；未在 Mac 真机上测试） |
 | macOS Intel (x64) | [1.2.3](https://api2.cursor.sh/updates/api/download/stable/darwin-x64/sand) | 0.71.2（实验：尚未适配 1.2.3；未在 Intel Mac 上测试） |
-| iOS | [1.26.0](https://apps.apple.com/us/app/grok-bot/id6794501026) | 1.16.0（构建 23152；未在 iPhone / iPad 上测试） |
+| iOS | [1.26.0](https://apps.apple.com/us/app/grok-bot/id6794501026) | 1.26.0（构建 29388；未在 iPhone / iPad 上测试） |
 | Android 9+（自开发，非官方） | 不用官方 Android 版 | App **1.1.0**（构建 10100），界面取自 Windows **1.1.0** 安装包（推荐；用不了再用 0.71.2） |
 | 网页版（浏览器，非官方） | 不用安装 | 界面取自 Windows **1.1.0** 安装包（推荐；用不了再用 0.71.2），生成后上传到你的 Host |
 | Linux 服务端 | 不适用 | Host `d0a4baa`；Bot 的电脑 `9d2ac1b`（x86_64） |

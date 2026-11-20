@@ -4,6 +4,13 @@
 
 Versions start at ProkBot Plus 1.0.0; upstream ProkBot releases are listed at the end. Full notes for each version are in its [release](https://github.com/ferretgeek/prokbot-plus/releases) and the commit history.
 
+## 未发布 / Unreleased
+
+适配官方 iOS 1.26.0（构建 29388）。这是客户端补丁更新，Host 和其他客户端不变；不提供原版或改好的 IPA。Support the official iOS 1.26.0 (build 29388). This is a client-patch update; the Host and other clients are unchanged. No original or patched IPA is distributed.
+
+- **iOS 1.26.0 / iOS 1.26.0**：固定清单、三份 Hermes 字节码配方、主程序和三个扩展的输入哈希已更新；Widget 深链接不再依赖固定地址，改为匹配唯一指令序列。补丁工具仍只从 `ios/recipes/ios/manifest.json` 读取版本并在修改前校验输入。The pinned manifest, three Hermes bytecode recipes and the main-app and extension input hashes are updated. The Widget deep link no longer depends on a fixed address and is located by its unique instruction sequence. The patcher still reads the version only from `ios/recipes/ios/manifest.json` and validates inputs before modifying them.
+- **验证 / Validation**：输入固定校验和自动测试通过；没有在 iPhone 或 iPad 真机上测试。Pinned-input checks and automated tests pass; not tested on a real iPhone or iPad.
+
 ## ProkBot Plus 1.6.0 (2026-11-20)
 
 Mac 补丁增加 Intel 芯片（实验），首页和文档整理。只有 Mac 补丁有程序变化，Host、Windows、Android、网页版和 iOS 与 1.5.1 相同。Experimental Intel Mac support, plus homepage and documentation work. Only the Mac patch changes; Host, Windows, Android, web and iOS are the same as 1.5.1.
@@ -23,7 +30,7 @@ Mac 补丁增加 Intel 芯片（实验），首页和文档整理。只有 Mac �
 - **桌面客户端遇到 401 / Desktop client and 401**：先用 `/connect/status` 核对，只有设备确实被撤销才断开要求重新配对。The client checks `/connect/status` first and asks for new pairing only when the device was revoked.
 - **设置文件损坏 / Damaged profile**：损坏的 `local-client-persistence.json` 改名保留，客户端按空数据继续。A damaged file is kept under another name and the client continues with empty data.
 - **其他 / Other**：启动时直接用保存的主题；并发回复重复的工具调用 ID 不再让对话出错；Codex 提示措辞、`recover` 的错误说明；iOS 补丁从清单读取版本。The saved theme applies before first paint; a reused tool call ID no longer fails a chat; Codex prompt wording, the `recover` message, and iOS reads its version from the manifest.
-- **记录 / Records**：官方 Windows 和 Mac 已到 1.2.3、iOS 1.26.0（2026-11-19），本项目尚未适配；问题模板加入网页版。Official Windows and Mac are at 1.2.3 and iOS at 1.26.0, not yet supported here; issue templates gain a web client option.
+- **记录 / Records**：官方 Windows 和 Mac 已到 1.2.3、iOS 1.26.0（2026-11-19）；iOS 适配见上方未发布条目，问题模板加入网页版。Official Windows and Mac are at 1.2.3 and iOS at 1.26.0; see the Unreleased entry above for the iOS update, and issue templates gain a web client option.
 - 只有自动测试，没有在真实服务器或 Mac 上验收。Automated tests only; not checked on a real server or a Mac.
 
 ## ProkBot Plus 1.5.0 (2026-11-19)

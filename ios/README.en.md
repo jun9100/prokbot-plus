@@ -2,7 +2,7 @@
 
 [简体中文](README.md)
 
-Patch a decrypted Grok Bot 1.16.0 (23152) arm64 IPA. The app and all three extensions must be decrypted. Requires Python 3.10+. This repository does not provide any original or modified IPA; bring your own.
+Patch a decrypted Grok Bot 1.26.0 (29388) arm64 IPA. The app and all three extensions must be decrypted. Requires Python 3.10+. This repository does not provide any original or modified IPA; bring your own.
 
 For the full deployment steps see the [deployment guide](../docs/AI-INSTALL.en.md#client-packages); for how it works see the [technical documentation](../docs/ARCHITECTURE.en.md#ios-client).
 

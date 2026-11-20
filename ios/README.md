@@ -2,7 +2,7 @@
 
 [English](README.en.md)
 
-为 Grok Bot 1.16.0（23152）arm64 砸壳 IPA 注入补丁。主程序和三个扩展都必须是解密过的，需要 Python 3.10+。本仓库不提供任何原版或修改过的 IPA，请自己准备。
+为 Grok Bot 1.26.0（29388）arm64 砸壳 IPA 注入补丁。主程序和三个扩展都必须是解密过的，需要 Python 3.10+。本仓库不提供任何原版或修改过的 IPA，请自己准备。
 
 完整的部署步骤见[部署手册](../docs/AI-INSTALL.md#client-packages)，实现原理见[技术文档](../docs/ARCHITECTURE.md#ios-客户端)。
 
